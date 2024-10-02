@@ -1,12 +1,12 @@
 const torta = document.getElementById('torta');  
 const tortas = [  
-    '../TrabajoIntegradoPaginaWeb/imagentorta.png',  
-    '../TrabajoIntegradoPaginaWeb/otraImagen.png',  
-    '../TrabajoIntegradoPaginaWeb/Sin título.png',  
-    '../TrabajoIntegradoPaginaWeb/torta.png',  
-    '../TrabajoIntegradoPaginaWeb/tortaCasamiento.png',  
-    '../TrabajoIntegradoPaginaWeb/TortaSimpleLinda.png',  
-    '../TrabajoIntegradoPaginaWeb/simple.png'  
+    '../otraImagen.png',  
+    '../simple.png',  
+    '../Sin título.png',  
+    '../torta.png',  
+    '../tortaCasamiento.png',  
+    '../imagentorta.png',  
+    '../TortaSimpleLinda.png'  
 ]; 
 const carouselContainer = document.querySelector('.carousel-container');
 
