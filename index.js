@@ -1,12 +1,12 @@
 const torta = document.getElementById('torta');  
 const tortas = [  
-    '../otraImagen.png',  
-    '../simple.png',  
-    '../Sin título.png',  
-    '../torta.png',  
-    '../tortaCasamiento.png',  
-    '../imagentorta.png',  
-    '../TortaSimpleLinda.png'  
+    './otraImagen.png',  
+    './simple.png',  
+    './Sin título.png',  
+    './torta.png',  
+    './tortaCasamiento.png',  
+    './imagentorta.png',  
+    './TortaSimpleLinda.png'  
 ]; 
 const carouselContainer = document.querySelector('.carousel-container');
 
@@ -32,14 +32,22 @@ carouselContainer.addEventListener('mouseleave', () => {
     clearInterval(scrollInterval);
 });
 
+carouselContainer.addEventListener("scrollend", () => {
+    // aca va la logica para volver al inicio / final.
+    console.log("END")
+    carouselContainer.scrollLeft = 0;
+    
+})
+
 // Función para desplazarse automáticamente en la dirección indicada
 function scrollToDirection(direction) {
+    const SPEED = 40;
     clearInterval(scrollInterval); // Detener cualquier intervalo activo
     scrollInterval = setInterval(() => {
         if (direction === 'right') {
-            carouselContainer.scrollLeft += 2; // Ajustar la velocidad de desplazamiento
+            carouselContainer.scrollLeft += SPEED; // Ajustar la velocidad de desplazamiento
         } else if (direction === 'left') {
-            carouselContainer.scrollLeft -= 2;
+            carouselContainer.scrollLeft -= SPEED;
         }
     }, 10); // Ajustar la frecuencia del desplazamiento
 } 

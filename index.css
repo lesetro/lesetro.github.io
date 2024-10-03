@@ -1,28 +1,31 @@
 
 /* Estilo general del body y HTML */
-body, html {  
+body {  
     margin: 0;  
     padding: 0;  
     font-family: Arial, sans-serif;  
-    background-color: #e1c4ae;  
+    background-color: #e1c4ae;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }  
 
 /* Estilo del contenedor principal */
 .hero { 
-    margin-top: 80px; /* Deja espacio debajo del menú */ 
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    height: 60vh;  /* Ocupará toda la pantalla */
-    background-color: #f7f7f7;  
-    text-align: center;  
-    position: relative;  /* Para poder controlar el contenido y la imagen dentro */
+ /* Deja espacio debajo del menú */ 
+    height: 300px;  /* Ocupará toda la pantalla */
+    width: 90%;
+    background-color: #f7f7f700;  
+    margin-top: 70px;
+    margin-bottom: 20px;
 }  
 
 .hero img {  
-    width: 80vw;  
-    height: 50vh;  
-    object-fit: cover;  
+    width: 100%;  
+    height: 100%;  
+    object-fit: contain;  
     border-radius: 15px;  
     animation: heartbeat 2s infinite; /* Animación de latido constante */  
 }  
@@ -36,21 +39,6 @@ body, html {
     }  
 }
 
-/* Eliminar duplicaciones de .hero y ajustar */
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1; /* Para que el contenido esté por encima de la imagen */
-    color: white;
-}
-
 /* Contenedor del carrusel */
 .carousel-container {
     display: flex;
@@ -60,25 +48,31 @@ body, html {
     background-color: #bbc0be;
     overflow-x: auto; /* Permite el desplazamiento horizontal */
     scroll-behavior: smooth;
-    height: auto; /* Ajusta la altura al contenido */
+    height: 100%;
+    width: 100%;
 }
 
 /* Carrusel */
 .carousel {  
-    display: flex;  
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;  
     transition: transform 0.5s ease;  
 }  
 
 .carousel-item {  
     min-width: 250px; /* Tamaño de cada imagen */  
-    margin: 0 10px;  
+    height: 250px;
     transition: transform 0.3s ease;  
 }  
 
-.carousel-item img {  
+.carousel-item img {
+    height: 100%;
     width: 100%;  
-    height: auto; /* Mantener proporciones de las imágenes */  
     border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 0px 2px 1px #3c273f;
 }
 
 /* Efecto de crecimiento al pasar el mouse */
@@ -90,13 +84,12 @@ body, html {
 .skipper-menu {  
     position: fixed;  
     top: 0;  
-    left: 0;  
-    width: 100%;  
+    width: 100%;
+    height: 50px;  
     background-color: #a466a2; /* Color de fondo */
-    padding: 20px;  
     display: flex;  
     justify-content: center;  
-    z-index: 1000; /* Para que esté por encima del contenido */
+    z-index: 10; /* Para que esté por encima del contenido */
 }
 
 .skipper-menu ul {  
@@ -119,3 +112,4 @@ body, html {
 .skipper-menu ul li a:hover {  
     color: #f2f2f2;  
 }
+
