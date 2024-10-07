@@ -1,13 +1,5 @@
 const torta = document.getElementById('torta');  
-const tortas = [  
-    './otraImagen.png',  
-    './simple.png',  
-    './Sin título.png',  
-    './torta.png',  
-    './tortaCasamiento.png',  
-    './imagentorta.png',  
-    './TortaSimpleLinda.png'  
-]; 
+
 const carouselContainer = document.querySelector('.carousel-container');
 
 let scrollInterval; // Guardar el intervalo de scroll
@@ -32,13 +24,6 @@ carouselContainer.addEventListener('mouseleave', () => {
     clearInterval(scrollInterval);
 });
 
-carouselContainer.addEventListener("scrollend", () => {
-    // aca va la logica para volver al inicio / final.
-    console.log("END")
-    carouselContainer.scrollLeft = 0;
-    
-})
-
 // Función para desplazarse automáticamente en la dirección indicada
 function scrollToDirection(direction) {
     const SPEED = 40;
@@ -56,7 +41,7 @@ function scrollToDirection(direction) {
 document.querySelectorAll('.carousel-item img').forEach((img, index) => {  
     img.addEventListener('click', () => {  
         // Cambiar la imagen principal  
-        torta.src = tortas[index];  
+        torta.src = tortas[index].download_url;  
         torta.style.animation = 'fadeIn 1s';  // Aplicar la animación de entrada  
         setTimeout(() => {  
             torta.style.animation = '';  // Quitar la animación para que se pueda volver a aplicar  

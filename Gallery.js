@@ -1,23 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let gal = fetch("https://picsum.photos/v2/list?limit=5")
-        .then(res => res.json())
-        .then(collection => new Gallery(collection, 3000));
+    new Gallery(tortas);
 })
 
 class Gallery {
     constructor(collection, delay = null) {
+        this.htmlElement = document.getElementById("gallery");
+        if (!this.htmlElement) {
+            console.log("Se necesita un div #gallery")
+            return null;
+        }
         this.collection = collection;
         this.LAST_INDEX = collection.length - 1;
         this.DELAY = delay;
+
+        this.btn_bar = document.createElement("div");
+        this.btn_bar.id = "gal-btn-bar";
+
+        this.btn_left = document.createElement("button");
+        this.btn_left.innerText = "<";
+        this.btn_left.addEventListener("click", () => this.moveLeft());
+        this.btn_bar.appendChild(this.btn_left);
+
+        this.btn_right = document.createElement("button");
+        this.btn_right.innerText = ">";
+        this.btn_right.addEventListener("click", () => this.moveRight());
+        this.btn_bar.appendChild(this.btn_right);
+
+        this.frame_prev = document.createElement("img");
+        this.frame_prev.id = "prev-pic";
+        this.frame_curr = document.createElement("img");
+        this.frame_curr.id = "this-pic";
+        this.frame_next = document.createElement("img");
+        this.frame_next.id = "next-pic";
+
+        this.htmlElement.appendChild(this.frame_prev);
+        this.htmlElement.appendChild(this.frame_curr);
+        this.htmlElement.appendChild(this.frame_next);
+        this.htmlElement.appendChild(this.btn_bar);
+
         this.setX(0);
-
-        document.getElementById("gal-btn-prev")
-            .addEventListener("click", () => this.moveLeft());
-
-        document.getElementById("gal-btn-next")
-            .addEventListener("click", () => this.moveRight());
-
     }
+
 
     setX(x) {
         this.x = x;
@@ -30,13 +53,12 @@ class Gallery {
         const currentImg = this.collection[this.x];
         const prevImg = this.collection[this.prev];
         const nextImg = this.collection[this.next];
-        const currentFrame = document.getElementById("this-pic");
+        
+        this.frame_prev.src = prevImg.download_url;
+        this.frame_curr.src = currentImg.download_url;
+        this.frame_next.src = nextImg.download_url;
 
-        document.getElementById("prev-pic").src = prevImg.download_url;
-        currentFrame.src = currentImg.download_url;
-        document.getElementById("next-pic").src = nextImg.download_url;
-
-        currentFrame.alt = `A photo by ${currentImg.author}.`
+        this.frame_curr.alt = `A photo by ${currentImg.alt}.`
 
         if (this.interval)
             clearInterval(this.interval);
