@@ -1,0 +1,186 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e1c4ae;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+/* Estilos del menú */
+nav.skipper-menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+nav.skipper-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.skipper-menu ul li {
+    border: 3px solid rgb(114, 110, 110);
+    width: 30%;
+    border-radius: 10px;
+}
+
+nav.skipper-menu ul li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+
+}
+
+nav.skipper-menu ul li:hover {
+    background-color: #555;
+    transform: scale(1.2);
+}
+
+/* Contenedor principal */
+.contenedorTotal {
+    width: 100%;
+    margin-top: 70px;
+}
+
+
+.DosContenedores {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contenedor_izquierda {
+    width: 35%;
+    padding: 10px;
+    background-image: url("../imagenes/publicidad.png");
+    background-size: cover; 
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor_central {
+    width: 100%;
+}
+
+/* Animación de latido para la imagen principal */
+.principal {
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto;
+    width: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.carousel-images img {
+    width: 600px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn-left {
+    left: 10px;
+}
+
+#btn-right {
+    right: 10px;
+}
+
+.carousel-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Recuadros adicionales */
+.recuadro-adicional {
+    width: 100%;
+    background-color: #bbc0be;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.escribir {
+    font-size: 30px;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: escribiendo 4.5s steps(40, end) infinite;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+@keyframes escribiendo {
+    from { width: 0; }
+    to { width: 100%; }
+}
