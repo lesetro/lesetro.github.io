@@ -64,7 +64,7 @@ nav.skipper-menu ul li:hover {
 
 .contenedor_izquierda {
     width: 35%;
-    padding: 10px;
+    padding: 0px;
     background-image: url("../imagenes/publicidad.png");
     background-size: cover; 
     background-position: center;
@@ -168,8 +168,44 @@ nav.skipper-menu ul li:hover {
     margin-bottom: 20px;
     border-radius: 5px;
 }
+h3{ 
+    padding: 0%;
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 20px;
+    color: black;
+    background: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    width: 60%;
+}
+.recuadro-adicional-historia {
+    width: 100%;
+    padding: 20px; 
+    background-color: #cbfab2; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 32px;
+    color: #3a3a3a; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+p {
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 15px; 
+    text-align: justify; 
+    width: 90%;
+}
 
 .escribir {
+    margin-top: 50%;
     font-size: 30px;
     border-right: 3px solid black;
     white-space: nowrap;
