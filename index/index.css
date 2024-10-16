@@ -52,7 +52,7 @@ nav.skipper-menu ul li:hover {
 .contenedorTotal {
     width: 100%;
     margin-top: 70px;
-    margin-left: 70px;
+    margin: 0 70px;
 }
 
 
@@ -162,10 +162,11 @@ nav.skipper-menu ul li:hover {
 
 /* Recuadros adicionales */
 .recuadro-adicional {
-    width: 100%;
+    width: 90%;
     background-color: #bbc0be;
     padding: 20px;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 5px;
 }
@@ -181,10 +182,11 @@ h3{
     width: 60%;
 }
 .recuadro-adicional-historia {
-    width: 100%;
+    width: 90%;
     padding: 20px; 
     background-color: #cbfab2; 
     border-radius: 10px; 
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     font-family: 'Arial', sans-serif; 
     line-height: 1.6;
