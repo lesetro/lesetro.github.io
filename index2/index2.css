@@ -1,4 +1,39 @@
+nav.skipper-menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
 
+nav.skipper-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.skipper-menu ul li {
+    border: 3px solid rgb(114, 110, 110);
+    width: 30%;
+    border-radius: 10px;
+}
+
+nav.skipper-menu ul li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+
+}
+
+nav.skipper-menu ul li:hover {
+    background-color: #555;
+    transform: scale(1.2);
+}
         body {
             font-family: 'Verdana', sans-serif;
             background-color: #f3e7e9;
