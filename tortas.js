@@ -3,7 +3,7 @@ const tortas = [
         id: 0,
         tipo: 'chocolate',
         evento: 'cumpleaños',
-        img: '../imagenes/torta.png',
+        img: './imagenes/torta.png',
         nombre: 'Torta de Chocolate',
         relleno: 'Chocolate y crema',
         precio: 2000,
@@ -13,7 +13,7 @@ const tortas = [
         id: 1,
         tipo: 'vainilla',
         evento: 'casamiento',
-        img: '../imagenes/TortaSimpleLinda.png',
+        img: './imagenes/TortaSimpleLinda.png',
         nombre: 'Torta de Vainilla',
         relleno: 'Crema de vainilla',
         precio: 1500,
@@ -23,7 +23,7 @@ const tortas = [
         id: 2,
         tipo: 'chocolate',
         evento: 'egresados',
-        img: '../imagenes/otraImagen.png',
+        img: './imagenes/otraImagen.png',
         nombre: 'Torta de Chocolate para Egresados',
         relleno: 'Chocolate y crema',
         precio: 2000,
@@ -33,7 +33,7 @@ const tortas = [
         id: 3,
         tipo: 'vainilla',
         evento: 'bautismo',
-        img: '../imagenes/simple.png',
+        img: './imagenes/simple.png',
         nombre: 'Torta de Vainilla para Bautismo',
         relleno: 'Crema de vainilla',
         precio: 1500,
@@ -44,7 +44,7 @@ const tortas = [
         id: 4,
         tipo: 'frutas',
         evento: 'aniversario',
-        img: '../imagenes/otraImagen.png',
+        img: './imagenes/otraImagen.png',
         nombre: 'Torta de Frutas Frescas',
         relleno: 'Frutas de temporada',
         precio: 2500,
@@ -54,7 +54,7 @@ const tortas = [
         id: 5,
         tipo: 'vainilla',
         evento: 'presentación',
-        img: '../imagenes/torta.png',
+        img: './imagenes/torta.png',
         nombre: 'Torta de Vainilla Especial',
         relleno: 'Crema de vainilla con frutas',
         precio: 1800,
@@ -64,7 +64,7 @@ const tortas = [
         id: 6,
         tipo: 'frutas',
         evento: 'aniversario',
-        img: '../imagenes/otraImagen.png',
+        img: './imagenes/otraImagen.png',
         nombre: 'Torta de Frutas Frescas con almendras',
         relleno: 'Frutas de temporada con almendras',
         precio: 2500,
@@ -74,14 +74,10 @@ const tortas = [
         id: 7,
         tipo: 'vainilla',
         evento: 'casamiento',
-        img: '../imagenes/torta.png',
+        img: './imagenes/torta.png',
         nombre: 'Torta de Vainilla Especial con chispas',
         relleno: 'Crema de vainilla con frutas y chispas de chocolate',
         precio: 1800,
         precioPorKg: 900
     }
 ];
-
-function x() {
-
-}

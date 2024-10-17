@@ -157,7 +157,9 @@
         const puntuacion = document.getElementById('puntuar');
         const correo = document.getElementById('correo');
         const reseñasDiv = document.getElementById('reseñas');
-
+        const img = document.createElement("img");
+        img.src = "." + torta.img;
+        document.body.appendChild(img)
         // Validación y evento onfocus para vaciar el placeholder  
         nombre.addEventListener('focus', function () {
             nombre.placeholder = '';
@@ -228,6 +230,7 @@
 
             reseñasDiv.appendChild(reseñaDiv);
         }  
+
     </script>
 </body>
 
