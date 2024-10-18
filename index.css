@@ -32,9 +32,9 @@ nav.skipper-menu ul {
 }
 
 nav.skipper-menu ul li {
-    background-color: #333;
+    background-color: #ccf7e6;
     text-decoration: none;
-    border: 3px solid rgb(114, 110, 110);
+    border: 3px solid rgb(169, 189, 255);
     width: 15%;
     border-radius: 10px;
     
@@ -45,15 +45,16 @@ nav.skipper-menu ul li a {
     padding: 10px 20px;
     display: block;
     text-align: center;
-    color: white;
+    color: #000;
 }
 nav.skipper-menu ul li a:hover {
     color: #000;
 }
 nav.skipper-menu ul li:hover {
-    background-color: #ccf7e6;
+    background-color: #fcf29a;
     transform: scale(1.1);
     box-shadow: 0 0 1px 2px #000000b2;
+    font-weight: bold;
 }
 
 /* Contenedor principal */
