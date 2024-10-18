@@ -59,55 +59,52 @@ nav.skipper-menu ul li:hover {
 /* Contenedor principal */
 .contenedorTotal {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 
 .DosContenedores {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
+    padding: 1rem;
     margin-bottom: 20px;
 }
 
 .contenedor_izquierda {
-    width: 35%;
+    width: 60%;
     padding: 0px;
-    background-image: url("./imagenes/publicidad.png");
-    background-size: cover; 
+    background-image: url("./imagenes/publicidad.png") ;
     background-position: center;
     border-radius: 5px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
-    margin-left: 120px;
-}
-
-.contenedor_central {
-    width: 65%;
+    height: 450px;
+    background-position: center;
 }
 
 /* Carrusel */
 .carousel-container {
     position: relative;
     overflow: hidden;
-    margin: 30px auto;
-    width: 90%;
-    height: 600px;
-    
-
+    width: 90%;    
+    margin: 0 auto;
+    box-shadow: 0 0 1px 2px #00000083;
+    border-radius: 20px;
 }
 
 .carousel-images {
     display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    
 }
 
 .carousel-images img {
     width: 100%;
-    height: auto;
     margin: 0;
-    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -155,6 +152,7 @@ nav.skipper-menu ul li:hover {
     padding: 20px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
 }
@@ -230,10 +228,16 @@ p {
     border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .tortasMuestra img:hover {
     transform: scale(1.05); 
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+#imagen {
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
 }
