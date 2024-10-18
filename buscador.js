@@ -49,9 +49,10 @@ function mostrarTortas(tortasAMostrar) {
             <p>Relleno: ${torta.relleno}</p>
             <p>Precio: $${torta.precio}</p>
             <p>Precio por kg: $${torta.precioPorKg}/kg</p>
+            <button class="orden_button" onclick="agregar_al_carrito(${torta.id})">+</button>
             <button class="orden_button" onclick="llamarFormulario(${torta.id})">hace tu consulta</button>
-        `;
 
+        `;
         tortaContainer.appendChild(tortaElement);
     }
 }
@@ -59,7 +60,10 @@ function mostrarTortas(tortasAMostrar) {
 
 
 function llamarFormulario(id = null) {
-    window.location.href = `./contacto.html/?id=${id}`;
+    let url = "./contacto.html"
+    if (id)
+        url += `?id=${id}`
+    window.location.href = url;
 }
 
 // Muestra todas las tortas al cargar la página
