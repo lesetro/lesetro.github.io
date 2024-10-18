@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Tortas</title>
     <link rel="stylesheet" href="index.css">
+    <script src="./tortas.js"></script>
 </head>
 <body>
 
@@ -29,29 +30,27 @@
 
             <!-- Contenedor central con la imagen -->
             <div class="contenedor_central">
-                <section class="principal" id="inicio">
-                    <img id="torta" src="./imagenes/TortaSimpleLinda.png" alt="Torta Principal">
-                </section>
+                <div class="carousel-container">
+                    <div class="carousel-images">
+                        <img id="imagen" src="./imagenes/torta.png" alt="Imagen de torta" />
+                       
+                    </div>
+                    <button class="carousel-button" onclick="back()" id="btn-left"><img src="./imagenes/above_thearrow_1550.png" alt="Anterior"></button>
+                    <button class="carousel-button" onclick="next()" id="btn-right"><img src="./imagenes/Next_arrow_1559.png" alt="Siguiente"></button>
+                </div>
             </div>
         </div>
 
         <div id="recuadro-adicional_1" class="recuadro-adicional_1">
-            <h2>Galería Completa</h2>
+            <h2>Ultimos Pedidos</h2>
             <div class="gallery">
-                <div class="carousel-container">
-                    <div class="carousel-images">
-                        <img src="./imagenes/imagentorta.png" alt="Imagen 1">
-                        <img src="./imagenes/Sin título.png" alt="Imagen 2">
-                        <img src="./imagenes/tortaCasamiento.png" alt="Imagen 3">
-                        <img src="./imagenes/imagentorta.png" alt="Imagen 4">
-                        <img src="./imagenes/Sin título.png" alt="Imagen 5">
-                        <img src="./imagenes/tortaCasamiento.png" alt="Imagen 6">
-                        <img src="./imagenes/imagentorta.png" alt="Imagen 7">
-                        <img src="./imagenes/Sin título.png" alt="Imagen 8">
-                        <img src="./imagenes/tortaCasamiento.png" alt="Imagen 9">
+                <div class="muestra">
+                    <div class="tortasMuestra">
+                        <img id="imagen1" src="./imagenes/torta.png" alt="Imagen de torta" />
+                        <img id="imagen2" src="./imagenes/simple.png" alt="Imagen de torta" />
+                        <img id="imagen3" src="./imagenes/TortaSimpleLinda.png" alt="Imagen de torta" />
                     </div>
-                    <button class="carousel-button" id="btn-left"><img src="./imagenes/above_thearrow_1550.png" alt="Anterior"></button>
-                    <button class="carousel-button" id="btn-right"><img src="./imagenes/Next_arrow_1559.png" alt="Siguiente"></button>
+                   
                 </div>
             </div>
         </div>
@@ -68,33 +67,37 @@
 
         <div id="sobre-nosotros" class="recuadro-adicional-historia">
             <h2>Sobre Nosotros</h2>
-            <p>La historia de "Dulces Sueños" comienza hace diez años, cuando María, una apasionada de la repostería,
-                 decidió seguir su verdadera vocación. Desde pequeña, María siempre había disfrutado horneando
-                 y decorando pasteles para amigos y familiares. 
-                 <br>
-                 Sin embargo, fue en su búsqueda de perfección que encontró la Academia Liga, un centro de formación
-                 reconocido por su excelencia en pastelería y repostería.
-                 En la Academia Liga, María se sumergió en un mundo de técnicas, ingredientes y creatividad. 
-                 Aprendió de los mejores maestros pasteleros y disfrutó de cada momento, desde la elaboración 
-                 de masas hasta la decoración final. Este espacio no solo le brindó conocimientos técnicos,
-                 sino que también la inspiró a soñar en grande.
-                 <br>
-                 Tras completar su formación, María comenzó a trabajar en diversas pastelerías de la ciudad, 
-                 donde adquirió experiencia valiosa y desarrolló su propio estilo único. Sin embargo, 
-                 siempre sintió que había algo más grande esperándola. Fue entonces cuando decidió dar el salto 
-                 y abrir su propia pastelería: "Dulces Sueños".
-                 <br>
-                 Con una mezcla de creatividad y pasión, María lanzó "Dulces Sueños" en su barrio. Desde el primer
-                 día, su propósito fue ofrecer productos hechos con amor y los mejores ingredientes. 
-                 Su especialidad eran los pasteles personalizados, ideales para celebraciones y momentos especiales.
-                 El éxito fue inmediato; sus creaciones se volvían virales en las redes sociales y la clientela
-                 crecía rápidamente.
-                 <br>
-                 Después de diez años de trabajo arduo, "Dulces Sueños" se ha convertido en un referente en la
-                 comunidad. María no solo se enorgullece de sus deliciosos postres, sino también de haber creado un espacio donde cada cliente puede sentir la alegría y la calidez de un momento especial. Además, ha comenzado a impartir talleres de repostería, retribuyendo a la comunidad lo que aprendió en la Academia Liga.
-                 Hoy en día, "Dulces Sueños" se sigue expandiendo, siempre con la vista puesta en ofrecer lo mejor. 
-                 La historia de María es un testimonio de que la pasión y el esfuerzo pueden convertir un sueño en
-                 una dulce realidad.</p>
+            <p> Este emprendimiento, <strong>"TORTAS AMANDA"</strong> , nace principalmente del esfuerzo continuo 
+                y el apoyo constante de aquellos clientes que han depositado su confianza en nuestro trabajo,
+                impulsándonos a querer mejorar día a día, perfeccionándonos e implementando nuevas técnicas.
+                Lo que comenzó con la simple pasión de hornear y decorar pasteles para amigos y familiares,
+                fue creciendo hasta convertirnos en una opción reconocida y apreciada por una lista cada vez mayor de pedidos.
+                 <br> 
+                Sin embargo, fue en nuestra búsqueda de perfección que encontramos <strong>la Academia Liga</strong>,
+                un centro de formación reconocido por su excelencia en pastelería y repostería. En la Academia, 
+                nos sumergimos en un mundo lleno de técnicas, ingredientes y creatividad. Aprendimos de los mejores
+                maestros pasteleros y disfrutamos cada momento del proceso, desde la elaboración de masas hasta la 
+                decoración final. Este espacio no solo nos brindó conocimientos técnicos, sino que también nos 
+                inspiró a soñar en grande y a seguir mejorando.
+                <br> 
+                A medida que nuestros clientes proponían nuevos desafíos, fuimos adquiriendo valiosa experiencia, 
+                desarrollando nuestro propio estilo único y sin limitaciones en la creatividad. Siempre buscamos 
+                soluciones originales que no solo cumplen, sino que superan las expectativas, dejando a nuestros 
+                clientes completamente satisfechos. 
+                <br> 
+                Desde el primer día, nuestro propósito ha sido ofrecer 
+                productos elaborados con amor y utilizando los mejores ingredientes. Nuestra especialidad son los 
+                pasteles personalizados, como temáticas de <strong>La Granja de Zenón , el querido Hombre Araña,
+                La Vaca Lola, Toy Story, entre otros</strong>. También ofrecemos <strong>mesas dulces</strong> que son ideales 
+                para celebraciones y momentos especiales. 
+                <br>
+                El éxito fue inmediato; nuestras creaciones se difundieron rápidamente a través de las redes sociales,
+                y la clientela creció a un ritmo constante. <br> Después de diez años de arduo trabajo,
+                 <strong>"TORTAS AMANDA"</strong> se ha convertido en la opción más confiable para quienes buscan calidad, 
+                dedicación y creatividad. Los testimonios de nuestros clientes hablan por sí solos. En esta breve 
+                descripción de nuestro trabajo, hemos hablado poco de nuestros rellenos y sabores únicos, pero no por 
+                casualidad: si nos hemos especializado en la personalización de las tortas, podemos dar por hecho que 
+                el sabor exquisito está siempre garantizado al cien por ciento. </p>
         </div>
         <footer class="recuadro-adicional-historia" style="margin: 1rem auto">
             <a href="#"><img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg"><span>+54 266</span></a>
