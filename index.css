@@ -17,6 +17,7 @@ nav.skipper-menu {
     left: 0;
     width: 100%; 
     z-index: 1000;
+    background-color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
@@ -26,34 +27,25 @@ nav.skipper-menu ul {
     margin: 0;
     display: flex;
     justify-content: space-around;
-    gap: 1rem;
-    background-color: #e1c4ae;
-    padding: 0.5rem 0;
 }
 
 nav.skipper-menu ul li {
-    background-color: #333;
-    text-decoration: none;
     border: 3px solid rgb(114, 110, 110);
-    width: 15%;
+    width: 30%;
     border-radius: 10px;
-    
 }
 
 nav.skipper-menu ul li a {
-    text-decoration: none;
+    color: white;
     padding: 10px 20px;
     display: block;
     text-align: center;
-    color: white;
+
 }
-nav.skipper-menu ul li a:hover {
-    color: #000;
-}
+
 nav.skipper-menu ul li:hover {
-    background-color: #ccf7e6;
-    transform: scale(1.1);
-    box-shadow: 0 0 1px 2px #000000b2;
+    background-color: #555;
+    transform: scale(1.2);
 }
 
 /* Contenedor principal */
