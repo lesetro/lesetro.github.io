@@ -150,18 +150,89 @@ nav.skipper-menu ul li:hover {
 /* Recuadros adicionales */
 .contacto{
     width: 90%;
-    background-color: #deab84;
+    height: 400px;
+    background-color: #e8b68f;
     padding: 50px;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos entre el espacio disponibles */
+}
+.contenedor-formulario{
+    background-color: #deab84;
+    box-shadow: 0px 5px 10px black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulario input,
+textarea {  
+    margin: 10px 0;  
+    padding: 10px;  
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%; 
+    background-color: #deab84;
+    border: none;
+    
+}
+input::placeholder{
+    font-size: 40px;
+    
+}
+#enviar{
+    font-size: 20px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #a97f5e;
+    color: white;
+}
+
+label{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, "Helvetica Neue", Helvetica, sans-serif;
+}
+.cuadro-area {
+    width: 50%; 
+    padding: 20px;
+    height: 100%;
+   
+   
+}
+
+.lado-izquierdo {
+    width: 45%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    background-color: antiquewhite;
+    height: 290px;
+    border-radius: 15px; 
 }
 
 .recuadro-adicional-oferta {
     display: flex;
-    width: 97%;
+    width: 90%;
     background-color: #e1c4ae;
     padding: 0px;
     text-align: center;
@@ -173,6 +244,7 @@ nav.skipper-menu ul li:hover {
 
 }
 .recuadro-adicional-oferta img{
+    
     width: 100%;
     height: 70%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7) ;
@@ -180,10 +252,11 @@ nav.skipper-menu ul li:hover {
 
 }
 #oferta{
-    padding:50px;
+    margin-top: 200px;
 }
+
 .text-oferta{ 
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
     margin: auto;
     font-size:40px;
@@ -198,22 +271,17 @@ nav.skipper-menu ul li:hover {
 .recuadro-adicional-historia {
     width: 90%;
     padding: 20px; 
+    padding-top: 50px;
     background-color: #cbfab2; 
     border-radius: 10px; 
     margin:  auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     font-family: 'Arial', sans-serif; 
     line-height: 1.6;
+   
 }
 
 
-#contacto {
-    padding-bottom: 20px;
-    font-size: 32px;
-    color: #3a3a3a; 
-    text-align: center; 
-    margin-bottom: 20px; 
-}
 #pedidos{
     
     padding-bottom: 10px;
@@ -224,7 +292,9 @@ nav.skipper-menu ul li:hover {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 #pedidos img{
-    border-radius: 30px;
+    width: 500px;
+    height: 100px;
+    border-radius: 50px;
     box-shadow: 0px 3px 5px black;
 }
 p {
@@ -284,5 +354,19 @@ p {
     height: 450px;
     object-fit: cover;
 }
+h2{
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+#pieDePagina{
+    display: flex;
+    background-color: #ddd6d6;
+    justify-content: space-between;
+    margin: 10px;
+}
 
-
+#celu{
+    font-size: 20px;
+}
