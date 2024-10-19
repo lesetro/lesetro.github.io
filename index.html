@@ -57,7 +57,7 @@
     
 <div id="contacto" class="contacto">  
     <div class="formulario">  
-        <form action="#" novalidate> 
+        <form action="#" id="formulario" novalidate> 
             <h2>Pedi tu presupuesto</h2>
             <button type="submit" id="enviar">Enviar</button>    
             <div class="contenedor-formulario">  
@@ -65,31 +65,35 @@
                 <div class="lado-izquierdo">
                     <div>  
                         <label for="nombre">Nombre</label>  
-                        <input type="text" placeholder="__________________________________________________________" id="nombre" required />  
-                        <span id="errorNombre" class="error" style="display: none;">texto no valido</span>  
+                        <input type="text" id="nombre" placeholder="__________________________________________________________" id="nombre" required />  
+                        <span id="errorNombre" class="error" style="display: none;">Nombre no valido</span>  
                     </div>  
                     <div>  
                         <label for="apellido">Apellido</label>  
                         <input type="text" id="apellido" placeholder="_______________________________________________________" required>  
-                        <span id="errorPelicula" class="error" style="display: none;">texto no valido</span>  
+                        <span id="errorApellido" class="error" style="display: none;">Apellido no valido</span>  
                     </div>  
                     <div>  
                         <label for="telefono">Teléfono</label>  
-                        <input type="number" id="telefono" placeholder="_____________________________________________________________________" required />  
-                        <span id="errorPuntuacion" class="error" style="display: none;">Ingrese telefono sin cero ni 15</span>  
+                        <input type="text" id="telefono" placeholder="_____________________________________________________________________" required />  
+                        <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin cero ni 15</span>  
                     </div>  
                     <div> 
                         <label for="correo">Correo Electronico</label> 
                         <input type="email" id="correo" placeholder="_______________________________________________________________________" />  
                         <span id="errorEmail" class="error" style="display: none;">Correo inválido</span>  
-                    </div>  
+                    </div>
+                    
                 </div>
                 
                 <!-- Lado Derecho: Textarea -->
                 <div class="cuadro-area">  
                     <label for="descripcion">Ingresa descripción del presupuesto</label>  
                     <textarea id="descripcion" required></textarea>  
-                    <span id="errorPuntuacion" class="error" style="display: none;">No debe superar los 1000 caracteres</span>  
+                    <span id="errorDescripcion" class="error" style="display: none;">No debe superar los 1500 caracteres</span>  
+                </div> 
+                <div id="divCreado" style="display: none;">
+                    <h3 class="divC">Confirmacion de presupuesto</h3>
                 </div>  
             </div> 
            
@@ -154,5 +158,6 @@
 
     <!-- Scripts -->
     <script src="Gallery.js"></script> <!-- Archivo donde defines la clase Gallery -->
+    <script src="validarFor.js"></script>
 </body>
 </html>

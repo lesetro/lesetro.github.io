@@ -363,3 +363,36 @@ h2{
 #celu{
     font-size: 20px;
 }
+.divCreado {
+
+    padding-top: 10px;
+    border: 5px solid rgb(87, 89, 87);
+    width: 95%;
+    height: 80%;
+    align-items: center;
+    
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+.divC {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+#textoDiv{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px;
+    
+}
+.error {
+    color: red;
+    font-size: 15px;
+}

@@ -237,6 +237,7 @@
         });
 
         function agregarReseña(nombre, nombrePelicula, puntuacion, correo) {
+            const reseñasDiv = document.getElementById('reseñas');
             const reseñaDiv = document.createElement('div');
             reseñaDiv.classList.add('divCreado');
             reseñaDiv.innerHTML = `  
