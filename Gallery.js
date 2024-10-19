@@ -1,9 +1,9 @@
 // Código para cargar el carrusel
 const imagenesTortas = [
-    "./imagenes/imagentorta.png",
+    "./imagenes/Sin título.png",
     "./imagenes/torta.png", 
     "./imagenes/tortaCasamiento.png",
-    "./imagenes/imagentorta.png",
+    "./imagenes/simple.png",
     "./imagenes/torta.png", 
     "./imagenes/TortaSimpleLinda.png",
     
