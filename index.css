@@ -245,6 +245,7 @@ textarea {
 }
 #oferta{
     margin-top: 200px;
+    scroll-margin-top: 50px;
 }
 
 .text-oferta{ 
