@@ -14,7 +14,7 @@
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="./buscador.html">Galería</a></li>
-            <li><a href="#contacto">Presupuesto</a></li>
+            <li><a href="./contacto.html#contacto">Presupuesto</a></li>
             <li><a href="#oferta">Ofertas</a></li>
             <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
         </ul>
@@ -55,51 +55,7 @@
             </div>
         </div>
     
-<div id="contacto" class="contacto">  
-    <div class="formulario">  
-        <form action="#" id="formulario" novalidate> 
-            <h2>Pedi tu presupuesto</h2>
-            <button type="submit" id="enviar">Enviar</button>    
-            <div class="contenedor-formulario">  
-                <!-- Lado Izquierdo: Nombre, Apellido, Teléfono y Correo -->
-                <div class="lado-izquierdo">
-                    <div>  
-                        <label for="nombre">Nombre</label>  
-                        <input type="text" id="nombre" placeholder="__________________________________________________________" id="nombre" required />  
-                        <span id="errorNombre" class="error" style="display: none;">Nombre no valido</span>  
-                    </div>  
-                    <div>  
-                        <label for="apellido">Apellido</label>  
-                        <input type="text" id="apellido" placeholder="_______________________________________________________" required>  
-                        <span id="errorApellido" class="error" style="display: none;">Apellido no valido</span>  
-                    </div>  
-                    <div>  
-                        <label for="telefono">Teléfono</label>  
-                        <input type="text" id="telefono" placeholder="_____________________________________________________________________" required />  
-                        <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin cero ni 15</span>  
-                    </div>  
-                    <div> 
-                        <label for="correo">Correo Electronico</label> 
-                        <input type="email" id="correo" placeholder="_______________________________________________________________________" />  
-                        <span id="errorEmail" class="error" style="display: none;">Correo inválido</span>  
-                    </div>
-                    
-                </div>
-                
-                <!-- Lado Derecho: Textarea -->
-                <div class="cuadro-area">  
-                    <label for="descripcion">Ingresa descripción del presupuesto</label>  
-                    <textarea id="descripcion" required></textarea>  
-                    <span id="errorDescripcion" class="error" style="display: none;">No debe superar los 1500 caracteres</span>  
-                </div> 
-                <div id="divCreado" style="display: none;">
-                    <h3 class="divC">Confirmacion de presupuesto</h3>
-                </div>  
-            </div> 
-           
-        </form>  
-    </div>  
-</div>  
+
         
         <div id="oferta" class="oferta">
             <h3 class="text-oferta">Especial ofertas dia de la madre!!!</h3>
@@ -147,12 +103,16 @@
                 casualidad: si nos hemos especializado en la personalización de las tortas, podemos dar por hecho que 
                 el sabor exquisito está siempre garantizado al cien por ciento. </p>
         </div>
-        <footer id="pieDePagina" class="recuadro-adicional-historia" style="margin: 1rem auto">
+        <footer class="piePagina" style="margin: 1rem auto">
+            <div id="pieDePagina">
             <a href="#"><img src="./imagenes/icons8-whatsapp-96.png"><span id="celu">+54 266645466</span></a>
             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ARpgrqdIf6ugtyhuauIMfDUg2peO--ghtbo9Hy5uxsxwrQ1xH1W7IDYlvBRJmk7KL5vRpWj3oPCF&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S322379352%3A1729349182022815&ddm=0#sent/KtbxLrjCLNqHhjRWzMNhwTLfNRTbbpzdgV?projector=1&messagePartId=0.2" target="_blank" rel="noopener noreferrer"><img src="./imagenes/gmail_new_logo_icon_159149.png" alt="">tortasAmanda@gmail.com</a>
             <a href="https://www.instagram.com/"><img src="./imagenes/1491580635-yumminkysocialmedia26_83102.png" alt="">tortasAmanda</a>
             <a href="https://es-la.facebook.com/"><img src="./imagenes/social_facebook_box_blue_256_30649 (1).png" alt="">tortasAManda</a>
             <a href="https://www.tiktok.com/explore"><img src="./imagenes/tiktok_tik_tok_logo_mint_icon_134948.png" alt="">TortasAmanda</a>
+
+            </div>
+            
         </footer>
     </div>
 

@@ -4,102 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./tortas.js"></script>
-    <script src="carrito.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleFormulario.css">
     <title>Evaluación de Películas</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        .contenedorF {
-            background-color: white;
-            border: 5px solid red;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            box-sizing: border-box;
-        }
-
-        .error {
-            color: red;
-            font-size: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            margin-left: 10px;
-        }
-
-        input,
-        textarea {
-            margin: 10px 0;
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            height: 80px;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: rgb(245, 144, 90);
-            font-size: 16px;
-        }
-
-        button {
-            background-color: rgb(224, 36, 36);
-            border: none;
-            color: white;
-            border-radius: 10px;
-            padding: 10px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: darkred;
-        }
-
-        input:focus::placeholder,
-        textarea:focus::placeholder {
-            color: transparent;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-        }
-
-        .divCreado {
-            margin: 20px;
-            padding-top: 10px;
-            border: 5px solid green;
-
-        }
-
-        h3 {
-            font-size: 30px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-weight: bold;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -108,146 +16,64 @@
         <ul>
             <li><a href="./index.html#inicio">Inicio</a></li>
             <li><a href="./buscador.html">Galería</a></li>
-            <li><a href="./index.html#contacto">Presupuesto</a></li>
+            <li><a href="./contacto.html#contacto">Presupuesto</a></li>
             <li><a href="./index.html#oferta">Ofertas</a></li>
             <li><a href="./index.html#sobre-nosotros">Sobre Nosotros</a></li>
         </ul>
     </nav>
-        <form action="#" class="contenedorF" id="formulario" novalidate>
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" placeholder="____________________________________" id="nombre" required />
-                <span id="errorNombre" class="error" style="display: none;">Hasta 10 caracteres</span>
-            </div>
+    <div id="contacto" class="contacto">  
+        <div class="formulario">  
+            <form action="#" id="formulario" novalidate> 
+                <h2>Pedi tu presupuesto</h2>
+                <h3>ingresar cantidad de personas, fecha del evento, rellenos, tipo de evento, lugar,
+                    puede ayudarse con el " + " de galerias.</h3>
 
-            <div>
-                <label for="nombrePelicula">Nombre de la Película</label>
-                <textarea id="nombrePelicula" placeholder="____________________________" required></textarea>
-                <span id="errorPelicula" class="error" style="display: none;">Hasta 200 caracteres</span>
-            </div>
-            <div>
-                <label for="puntuar">Puntuación</label>
-                <input type="number" id="puntuar"
-                    placeholder="___________________________________________________________" required />
-                <span id="errorPuntuacion" class="error" style="display: none;">La puntuación debe ser entre 1 y
-                    10</span>
-            </div>
+                <button type="submit" id="enviar">Enviar</button>    
+                <div class="contenedor-formulario">  
+                    <!-- Lado Izquierdo: Nombre, Apellido, Teléfono y Correo -->
+                    <div class="lado-izquierdo">
+                        <div>  
+                            <label for="nombre">Nombre</label>  
+                            <input type="text" autocapitalize="none" id="nombre" placeholder="__________________________________________________________" id="nombre" required />  
+                            <span id="errorNombre" class="error" style="display: none;">Nombre no valido</span>  
+                        </div>  
+                        <div>  
+                            <label for="apellido">Apellido</label>  
+                            <input type="text" autocapitalize="none" id="apellido" placeholder="_______________________________________________________" required>  
+                            <span id="errorApellido" class="error" style="display: none;">Apellido no valido</span>  
+                        </div>  
+                        <div>  
+                            <label for="telefono">Teléfono</label>  
+                            <input type="text" autocapitalize="none" id="telefono" placeholder="_____________________________________________________________________" required />  
+                            <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin cero ni 15</span>  
+                        </div>  
+                        <div> 
+                            <label for="correo">Correo Electronico</label> 
+                            <input type="email" autocapitalize="none" id="correo" placeholder="_______________________________________________________________________" />  
+                            <span id="errorEmail" class="error" style="display: none;">Correo inválido</span>  
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Lado Derecho: Textarea -->
+                    <div class="cuadro-area">  
+                        <label for="descripcion">Ingresa descripción del presupuesto</label>  
+                        <textarea id="descripcion" autocapitalize="none" required></textarea>  
+                        <span id="errorDescripcion" class="error" style="display: none;">No debe superar los 2500 caracteres</span>  
+                    </div> 
+                    <div id="divCreado" style="display: none;">
+                        <h3 class="divC">Confirmacion de presupuesto</h3>
+                    </div>  
+                </div> 
+               
+            </form>  
+        </div>  
+    </div>  
 
-            <div>
-                <label for="correo">Email</label>
-                <input type="email" id="correo" placeholder="___________________________________________________" />
-                <span id="errorEmail" class="error" style="display: none;">Correo inválido</span>
-            </div>
-
-            <button type="submit">Guardar reseña</button>
-            <a id="wpp_link" href="#"><img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg"></a>
-        </form>
-
-    <div id="reseñas" style="display: none;">
-        <h3>Últimas reseñas</h3>
-    </div>
-
-    <script>
-        let idTorta, torta;
-
-        idTorta = new URLSearchParams(window.location.search).get("id")
-        if (idTorta) {
-            torta = tortas.filter(torta => torta.id == idTorta)[0];
-        }
-
-        const formulario = document.getElementById('formulario');
-        const nombre = document.getElementById('nombre');
-        const nombrePelicula = document.getElementById('nombrePelicula');
-        const puntuacion = document.getElementById('puntuar');
-        const correo = document.getElementById('correo');
-        const reseñasDiv = document.getElementById('reseñas');
-        const div = document.createElement("div");
-        const lista = document.createElement("ol")
-        // la wea del whatsapp
-        let carrito = get_carrito();
-        document.getElementById("wpp_link").addEventListener("click", ev => {
-            ev.preventDefault();
-            const numero_wpp = "549266xxxxxxx"
-            //"54266"
-            let msg = `Hola, soy ${nombre.value} y me interesaron tus `
-            carrito.lista.forEach(torta => msg += torta.nombre + ", ")
-            msg = msg.substring(0,msg.length-2) + '.'
-
-            window.open(`https://wa.me/${numero_wpp}?text=${msg}`, "_blank")
-        });
-        // Validación y evento onfocus para vaciar el placeholder  
-        nombre.addEventListener('focus', function () {
-            nombre.placeholder = '';
-        });
-        nombrePelicula.addEventListener('focus', function () {
-            nombrePelicula.placeholder = '';
-        });
-        puntuacion.addEventListener('focus', function () {
-            puntuacion.placeholder = '';
-        });
-        correo.addEventListener('focus', function () {
-            correo.placeholder = '';
-        });
-
-        formulario.addEventListener('submit', function (e) {
-            e.preventDefault();
-            let valid = true;
-
-            // Validación del nombre  
-            if (nombre.value.length > 10 || nombre.value.trim() === '') {
-                document.getElementById('errorNombre').style.display = 'inline';
-                valid = false;
-            } else {
-                document.getElementById('errorNombre').style.display = 'none';
-            }
-
-            // Validación del nombre de la película  
-            if (nombrePelicula.value.length > 200 || nombrePelicula.value.trim() === '') {
-                document.getElementById('errorPelicula').style.display = 'inline';
-                valid = false;
-            } else {
-                document.getElementById('errorPelicula').style.display = 'none';
-            }
-
-            // Validación de la puntuación  
-            if (puntuacion.value < 1 || puntuacion.value > 10 || puntuacion.value.trim() === '') {
-                document.getElementById('errorPuntuacion').style.display = 'inline';
-                valid = false;
-            } else {
-                document.getElementById('errorPuntuacion').style.display = 'none';
-            }
-            const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (correo.value && !emailExp.test(correo.value)) {
-                document.getElementById('errorEmail').style.display = 'inline';
-                valid = false;
-            } else {
-                document.getElementById('errorEmail').style.display = 'none';
-            }
-
-
-
-
-            if (valid) {
-                agregarReseña(nombre.value, nombrePelicula.value, puntuacion.value, correo.value);
-                alert("Formulario enviado correctamente");
-                formulario.reset();
-                reseñasDiv.style.display = 'block';
-            }
-        });
-
-        function agregarReseña(nombre, nombrePelicula, puntuacion, correo) {
-            const reseñasDiv = document.getElementById('reseñas');
-            const reseñaDiv = document.createElement('div');
-            reseñaDiv.classList.add('divCreado');
-            reseñaDiv.innerHTML = `  
-              <p>${nombre} dice que "${nombrePelicula}" tiene una puntuación de ${puntuacion}. Contacto: ${correo || 'No proporcionado'}.</p>  
-            `;
-
-            reseñasDiv.appendChild(reseñaDiv);
-        }
-
-    </script>
+    
+    <script src="validarFor.js"></script>
+    <script src="tortas.js"></script>
+    <script src="carrito.js"></script>
 </body>
 
 </html>

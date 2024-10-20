@@ -19,8 +19,8 @@ descripcion.addEventListener('focus', function () {
 formulario.addEventListener('submit', function (e) {  
     e.preventDefault();  
     let valid = true;  
-    const descripcionExp = /^.{0,1500}$/;
-    const telefonoExp = /^(?!15)[1-9]\d$/; 
+    const descripcionExp = /^.{0,2500}$/;
+    const telefonoExp = /^(?!15)\d{1}[0-9]{6,9}$/; 
     const apellidoExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const nombreExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
