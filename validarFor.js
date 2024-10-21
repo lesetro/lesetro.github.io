@@ -75,19 +75,32 @@ formulario.addEventListener('submit', function (e) {
         confirmarEnvio(nombre.value, apellido.value, telefono.value, descripcion.value, correo.value);  
         alert("Formulario enviado correctamente");  
         formulario.reset();  
-        document.getElementById("divCreado").style.display = 'block'; // Mostrar las reseñas  
+        document.getElementById("divCreado").style.display = 'block';  
     }  
 });  
 
 // Confirmar envío de datos  
-function confirmarEnvio(nombre, apellido, telefono, correo) {  
+function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {  
     const reseñasDiv = document.getElementById("divCreado")  
     const reseñaDiv = document.createElement('div');  
     reseñaDiv.classList.add('divCreado');  
     reseñaDiv.innerHTML = `  
       <p id="textoDiv">${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
-      En breve nos comunicaremos al ${telefono} o bien al correo ${correo || 'No proporcionado'}.</p>  
+      En breve nos comunicaremos al ${telefono} ${idTota}o bien al correo ${correo || 'No proporcionado'}.</p>  
     `;  
 
     reseñasDiv.appendChild(reseñaDiv);  
 }
+
+
+// si se selecciono una imagene en consulta obtener el id como dato
+let idTota;
+
+document.getElementById("descripcion").addEventListener("focus",function(){
+const params = new URLSearchParams(window.location.search);
+idTorta = params.get('id');
+
+if (idTorta) {
+    document.getElementById("descripcion").value = `usted ha seleccionado torta con id = ${idTorta}`;
+} 
+});

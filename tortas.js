@@ -1,6 +1,6 @@
 const tortas = [
     {
-        id: 0,
+        id: 1,
         tipo: 'chocolate',
         evento: 'cumpleaños',
         img: './imagenes/torta.png',
@@ -10,7 +10,7 @@ const tortas = [
         precioPorKg: 1000
     },
     {
-        id: 1,
+        id: 2,
         tipo: 'vainilla',
         evento: 'casamiento',
         img: './imagenes/TortaSimpleLinda.png',
@@ -20,7 +20,7 @@ const tortas = [
         precioPorKg: 800
     },
     {
-        id: 2,
+        id: 3,
         tipo: 'chocolate',
         evento: 'egresados',
         img: './imagenes/otraImagen.png',
@@ -30,7 +30,7 @@ const tortas = [
         precioPorKg: 1000
     },
     {
-        id: 3,
+        id: 4,
         tipo: 'vainilla',
         evento: 'bautismo',
         img: './imagenes/simple.png',
@@ -41,7 +41,7 @@ const tortas = [
     },
 
     {
-        id: 4,
+        id: 5,
         tipo: 'frutas',
         evento: 'aniversario',
         img: './imagenes/otraImagen.png',
@@ -51,7 +51,7 @@ const tortas = [
         precioPorKg: 1200
     },
     {
-        id: 5,
+        id: 6,
         tipo: 'vainilla',
         evento: 'presentación',
         img: './imagenes/torta.png',
@@ -61,7 +61,7 @@ const tortas = [
         precioPorKg: 900
     },
     {
-        id: 6,
+        id: 7,
         tipo: 'frutas',
         evento: 'aniversario',
         img: './imagenes/otraImagen.png',
@@ -71,7 +71,7 @@ const tortas = [
         precioPorKg: 1200
     },
     {
-        id: 7,
+        id: 8,
         tipo: 'vainilla',
         evento: 'casamiento',
         img: './imagenes/torta.png',

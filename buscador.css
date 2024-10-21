@@ -71,7 +71,7 @@ h1 {
 }
 
 .seccion {
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
     background-color: #edd9cb;
     border: 1px solid #e0dcd8;
@@ -103,10 +103,12 @@ h1 {
 
 .order-button:hover {
     background-color: #d3a8ab;
+    
 }
 
 .titulo_torta h2 {
-    font-size: 50px;
+    font-size: 30px;
     color: #d17a87;
     font-weight: bold;
+    margin-top: 20px;
 }

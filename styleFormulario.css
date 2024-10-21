@@ -136,12 +136,3 @@ h3{
     margin: 20px;
     
 }
-#agregarCarrito{
-    outline: none; 
-    border: none;  
-    font-weight: bold; 
-    padding: 10px 20px; 
-    cursor: pointer;
-    background-color: #dff2c9;
-    border-radius: 10px;
-}
