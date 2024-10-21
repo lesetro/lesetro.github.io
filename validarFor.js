@@ -20,7 +20,7 @@ formulario.addEventListener('submit', function (e) {
     e.preventDefault();  
     let valid = true;  
     const descripcionExp = /^.{0,2500}$/;
-    const telefonoExp = /^(?!15)\d{1}[0-9]{6,9}$/; 
+    const telefonoExp = /^(?!15)(?!0)\d{6,10}$/;
     const apellidoExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const nombreExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
@@ -86,7 +86,7 @@ function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {
     reseñaDiv.classList.add('divCreado');  
     reseñaDiv.innerHTML = `  
       <p id="textoDiv">${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
-      En breve nos comunicaremos al ${telefono} ${idTota}o bien al correo ${correo || 'No proporcionado'}.</p>  
+      En breve nos comunicaremos al ${telefono} o bien al correo ${correo || 'No proporcionado'}.</p>  
     `;  
 
     reseñasDiv.appendChild(reseñaDiv);  
