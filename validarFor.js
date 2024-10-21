@@ -80,7 +80,7 @@ formulario.addEventListener('submit', function (e) {
 });  
 
 // Confirmar envío de datos  
-function confirmarEnvio(nombre, apellido, telefono, descripcion, correo) {  
+function confirmarEnvio(nombre, apellido, telefono, correo) {  
     const reseñasDiv = document.getElementById("divCreado")  
     const reseñaDiv = document.createElement('div');  
     reseñaDiv.classList.add('divCreado');  

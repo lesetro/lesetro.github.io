@@ -20,6 +20,7 @@ body {
     height: 80%;
     align-items: center;
     overflow-y: auto;
+    background-color: #dff2c9;
     
 }
 input:focus::placeholder,
@@ -74,7 +75,7 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     width: 200%;
-    margin-bottom: 100px;
+
 }
 
 .formulario input,
@@ -121,6 +122,8 @@ label{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+
 }
 
 textarea {
@@ -132,4 +135,13 @@ textarea {
 h3{
     margin: 20px;
     
+}
+#agregarCarrito{
+    outline: none; 
+    border: none;  
+    font-weight: bold; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    background-color: #dff2c9;
+    border-radius: 10px;
 }
