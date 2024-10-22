@@ -8,6 +8,7 @@ const formulario = document.getElementById('formulario');
 const obtenerID = document.getElementById('obtenerID'); 
 const contador = document.getElementById('contador');
 const maxLength = 700;
+const botonEnviar = document.getElementById('enviar');
 
 // Event listeners for focus to clear placeholder  
 nombre.addEventListener('focus', function () {  
@@ -38,7 +39,7 @@ formulario.addEventListener('submit', function (e) {
     const emailExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
 
     // Validación del nombre  
-    if (nombre.value.trim() === '' || !nombreExp.test(nombre.value)) {  
+    if (nombre.value.trim() === '' || !nombreExp.test(nombre.value) || nombre.value.length > 30) {  
         document.getElementById('errorNombre').style.display = 'inline'; 
         nombre.value = ""; 
         valid = false;  
@@ -47,7 +48,7 @@ formulario.addEventListener('submit', function (e) {
     }  
 
     // Validación del apellido  
-    if (apellido.value.trim() === '' || !apellidoExp.test(apellido.value)) {  
+    if (apellido.value.trim() === '' || !apellidoExp.test(apellido.value) || apellido.value.length > 30) {  
         document.getElementById('errorApellido').style.display = 'inline';  
         apellido.value = "";
         valid = false;  
@@ -87,7 +88,11 @@ formulario.addEventListener('submit', function (e) {
         alert("Formulario enviado correctamente");
         formulario.reset();  
         document.getElementById("divCreado").style.display = 'block'; 
-        contador.textContent = ` 0/${maxLength} caracteres`; // Reiniciar el contador 
+        contador.textContent = ""; // Reiniciar el contador 
+        botonEnviar.disabled = true;
+        botonEnviar.textContent = 'Enviado';
+        botonEnviar.style.backgroundColor = "#455741";
+        
     }  
 });  
 
@@ -95,11 +100,23 @@ formulario.addEventListener('submit', function (e) {
 function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {  
     const reseñasDiv = document.getElementById("divCreado")  
     const reseñaDiv = document.createElement('div');  
-    reseñaDiv.classList.add('divCreado');  
-    reseñaDiv.innerHTML = 
-    `<p id="textoDiv">${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
-    En breve nos comunicaremos al ${telefono} o bien al correo ${correo || 'No proporcionado'}.</p>`;
-  
+    let idTorta;
+
+    reseñaDiv.classList.add('divCreado'); 
+    //obtener ID Torta
+    const params = new URLSearchParams(window.location.search);
+    idTorta = params.get('id');
+
+    if (idTorta) {
+
+        reseñaDiv.innerHTML = 
+            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
+            En breve nos comunicaremos al ${telefono} o bien al correo ${correo}. Torta de interes con ID = ${idTorta}</p>`;
+    }  else{
+        reseñaDiv.innerHTML = 
+            `<p id="textoDiv"> ${nombre} ${apellido} Gracias por ponerte en contacto con "TortasAmanda".   
+            En breve nos comunicaremos al ${telefono} o bien al correo ${correo}.</p>`;
+    }
 
     reseñasDiv.appendChild(reseñaDiv);  
 }
@@ -115,14 +132,7 @@ descripcion.addEventListener('input', function() {
         document.getElementById('errorDescripcion').style.display = 'none';
     }
 });
-// si se selecciono una imagene en consulta obtener el id como dato
-let idTorta;
 
-document.getElementById("obtenerID").addEventListener("click",function(){
-const params = new URLSearchParams(window.location.search);
-idTorta = params.get('id');
 
-if (idTorta) {
-    document.getElementById("descripcion").value = `usted ha seleccionado torta con id = ${idTorta}`;
-} 
-});
+
+
