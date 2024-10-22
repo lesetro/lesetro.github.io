@@ -33,22 +33,22 @@
                     <div class="lado-izquierdo">
                         <div>  
                             <label for="nombre">Nombre</label>  
-                            <input type="text" autocapitalize="none" id="nombre" placeholder="__________________________________________________________" id="nombre" required />  
+                            <input type="text" autocomplete="off" id="nombre" placeholder="__________________________________________________________" required />  
                             <span id="errorNombre" class="error" style="display: none;">Nombre no valido, solo letras</span>  
                         </div>  
                         <div>  
                             <label for="apellido">Apellido</label>  
-                            <input type="text" autocapitalize="none" id="apellido" placeholder="_______________________________________________________" required>  
+                            <input type="text" autocomplete="off" id="apellido" placeholder="_______________________________________________________" required>  
                             <span id="errorApellido" class="error" style="display: none;">Apellido no valido, solo letras</span>  
                         </div>  
                         <div>  
                             <label for="telefono">Teléfono</label>  
-                            <input type="text" autocapitalize="none" id="telefono" placeholder="_____________________________________________________________________" required />  
+                            <input type="text" autocomplete="off" id="telefono" placeholder="_____________________________________________________________________" required />  
                             <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin "0" ni "15"</span>  
                         </div>  
                         <div> 
                             <label for="correo">Correo Electronico</label> 
-                            <input type="email" autocapitalize="none" id="correo" placeholder="_______________________________________________________________________" />  
+                            <input type="email" autocomplete="off" id="correo" placeholder="_______________________________________________________________________" required />  
                             <span id="errorEmail" class="error" style="display: none;">Correo inválido, ejemplo "usuario@gmail.com"</span>  
                         </div>
                         
@@ -57,9 +57,13 @@
                     <!-- Lado Derecho: Textarea -->
                     <div class="cuadro-area">  
                         <label for="descripcion">Ingresa descripción del presupuesto</label>  
-                        <textarea id="descripcion" autocapitalize="none" required></textarea>  
-                        <span id="errorDescripcion" class="error" style="display: none;">Maximo 2500 caracteres, los espacios cunetan como caracter</span>  
-                        <span><button id="obtenerID">Obtener ID de tortas</button></span>
+                        <textarea id="descripcion" autocomplete="none" required></textarea> 
+                        <span id="errorDescripcion" class="error" style="display: none;">Minimo 100, Maximo 700 caracteres </span>  
+                        <div id="contadorObtenerID">
+                            <span><button type="button" id="obtenerID">Obtener ID de tortas</button></span>
+                            <span id="contador">0/700 caracteres</span> 
+                        </div>
+                        
                     </div> 
                     
                     <div id="divCreado" style="display: none;">

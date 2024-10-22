@@ -46,6 +46,7 @@ textarea:focus {
 .error {
     color: red;
     font-size: 15px;
+    width: 100%;
 }
 /* Recuadros adicionales */
 .contacto{
@@ -113,8 +114,10 @@ label{
     width: 50%; 
     padding: 20px;
     height: 100%;
-   
-   
+}
+#contadorObtenerID{
+    width: 100%;
+
 }
 
 .lado-izquierdo {
