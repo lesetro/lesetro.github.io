@@ -35,7 +35,7 @@ formulario.addEventListener('submit', function (e) {
     const telefonoExp = /^(?!15)(?!0)\d{6,10}$/;
     const apellidoExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const nombreExp = /^[a-zA-ZÀ-ÿ\s]+$/;
-    const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    const emailExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
 
     // Validación del nombre  
     if (nombre.value.trim() === '' || !nombreExp.test(nombre.value)) {  
