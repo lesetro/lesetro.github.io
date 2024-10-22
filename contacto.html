@@ -34,22 +34,22 @@
                         <div>  
                             <label for="nombre">Nombre</label>  
                             <input type="text" autocapitalize="none" id="nombre" placeholder="__________________________________________________________" id="nombre" required />  
-                            <span id="errorNombre" class="error" style="display: none;">Nombre no valido</span>  
+                            <span id="errorNombre" class="error" style="display: none;">Nombre no valido, solo letras</span>  
                         </div>  
                         <div>  
                             <label for="apellido">Apellido</label>  
                             <input type="text" autocapitalize="none" id="apellido" placeholder="_______________________________________________________" required>  
-                            <span id="errorApellido" class="error" style="display: none;">Apellido no valido</span>  
+                            <span id="errorApellido" class="error" style="display: none;">Apellido no valido, solo letras</span>  
                         </div>  
                         <div>  
                             <label for="telefono">Teléfono</label>  
                             <input type="text" autocapitalize="none" id="telefono" placeholder="_____________________________________________________________________" required />  
-                            <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin cero ni 15</span>  
+                            <span id="errorTelefono" class="error" style="display: none;">Ingrese telefono sin "0" ni "15"</span>  
                         </div>  
                         <div> 
                             <label for="correo">Correo Electronico</label> 
                             <input type="email" autocapitalize="none" id="correo" placeholder="_______________________________________________________________________" />  
-                            <span id="errorEmail" class="error" style="display: none;">Correo inválido</span>  
+                            <span id="errorEmail" class="error" style="display: none;">Correo inválido, ejemplo "usuario@gmail.com"</span>  
                         </div>
                         
                     </div>
@@ -58,11 +58,14 @@
                     <div class="cuadro-area">  
                         <label for="descripcion">Ingresa descripción del presupuesto</label>  
                         <textarea id="descripcion" autocapitalize="none" required></textarea>  
-                        <span id="errorDescripcion" class="error" style="display: none;">No debe superar los 2500 caracteres, ni saltos de linea</span>  
+                        <span id="errorDescripcion" class="error" style="display: none;">Maximo 2500 caracteres, los espacios cunetan como caracter</span>  
+                        <span><button id="obtenerID">Obtener ID de tortas</button></span>
                     </div> 
+                    
                     <div id="divCreado" style="display: none;">
                         <h3 class="divC">Confirmacion de presupuesto</h3>
                     </div>  
+                    
                 </div> 
                
             </form>  

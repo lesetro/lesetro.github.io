@@ -1,3 +1,13 @@
+
+const nombre = document.getElementById('nombre');  
+const apellido = document.getElementById('apellido');
+const telefono = document.getElementById('telefono');
+const descripcion = document.getElementById('descripcion');
+const correo = document.getElementById('correo');  
+const formulario = document.getElementById('formulario');
+const obtenerID = document.getElementById('obtenerID'); 
+
+
 // Event listeners for focus to clear placeholder  
 nombre.addEventListener('focus', function () {  
     nombre.placeholder = '';  
@@ -19,14 +29,13 @@ descripcion.addEventListener('focus', function () {
 formulario.addEventListener('submit', function (e) {  
     e.preventDefault();  
     let valid = true;  
-    const descripcionExp = /^.{0,2500}$/;
     const telefonoExp = /^(?!15)(?!0)\d{6,10}$/;
     const apellidoExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const nombreExp = /^[a-zA-ZÀ-ÿ\s]+$/;
     const emailExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
     // Validación del nombre  
-    if (nombre.value.length < 5 || nombre.value.trim() === '' || !nombreExp.test(nombre.value)) {  
+    if (nombre.value.trim() === '' || !nombreExp.test(nombre.value)) {  
         document.getElementById('errorNombre').style.display = 'inline'; 
         nombre.value = ""; 
         valid = false;  
@@ -35,7 +44,7 @@ formulario.addEventListener('submit', function (e) {
     }  
 
     // Validación del apellido  
-    if (apellido.value.length < 5 || apellido.value.trim() === '' || !apellidoExp.test(apellido.value)) {  
+    if (apellido.value.trim() === '' || !apellidoExp.test(apellido.value)) {  
         document.getElementById('errorApellido').style.display = 'inline';  
         apellido.value = "";
         valid = false;  
@@ -63,10 +72,11 @@ formulario.addEventListener('submit', function (e) {
     }  
 
     // Validación de la descripción  
-    if ( !descripcionExp.test(descripcion.value)) {  
+    if (descripcion.value.length > 2500) {
         document.getElementById('errorDescripcion').style.display = 'inline';  
         valid = false;  
     } else {  
+        
         document.getElementById('errorDescripcion').style.display = 'none';  
     }  
 
@@ -96,7 +106,7 @@ function confirmarEnvio(nombre, apellido, telefono,descripcion, correo) {
 // si se selecciono una imagene en consulta obtener el id como dato
 let idTota;
 
-document.getElementById("descripcion").addEventListener("focus",function(){
+document.getElementById("obtenerID").addEventListener("focus",function(){
 const params = new URLSearchParams(window.location.search);
 idTorta = params.get('id');
 
