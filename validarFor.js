@@ -10,26 +10,7 @@ const contador = document.getElementById('contador');
 const maxLength = 700;
 const botonEnviar = document.getElementById('enviar');
 
-// Event listeners for focus to clear placeholder  
-nombre.addEventListener('focus', function () {  
-    nombre.placeholder = '';  
-});  
-apellido.addEventListener('focus', function () {  
-    apellido.placeholder = '';  
-});  
-telefono.addEventListener('focus', function () {  
-    telefono.placeholder = '';  
-});  
-correo.addEventListener('focus', function () {  
-    correo.placeholder = '';  
-});  
-descripcion.addEventListener('focus', function () {  
-    descripcion.placeholder = '';  
-});  
-
-
-
-// Validation on form submit  
+ 
 formulario.addEventListener('submit', function (e) {  
     e.preventDefault();  
     let valid = true;  
